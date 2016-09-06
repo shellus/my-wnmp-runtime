@@ -11,6 +11,11 @@ php
 
 http://windows.php.net/download#php-5.6
 
+mariadb
+
+https://downloads.mariadb.org/
+
+
 install windows service 
 
 https://github.com/kohsuke/winsw
