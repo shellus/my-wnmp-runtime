@@ -11,6 +11,8 @@ php
 
 http://windows.php.net/download#php-5.6
 
+注意从左边推荐链接下载对应的vc运行库
+
 mariadb
 
 https://downloads.mariadb.org/
