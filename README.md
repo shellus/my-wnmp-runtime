@@ -1,28 +1,35 @@
 # my-wnmp-runtime
 配置windows下WNMP环境的步骤
 
-下载：
+----
 
-nginx
+###下载：
 
-http://nginx.org/en/download.html
+- nginx
 
-php
+  http://nginx.org/en/download.html
 
-http://windows.php.net/download#php-5.6
+- php
 
-注意从左边推荐链接下载对应的vc运行库
+  http://windows.php.net/download#php-5.6
 
-mariadb
+  注意从左边推荐链接下载对应的vc运行库
 
-https://downloads.mariadb.org/
+- mariadb
 
+  https://downloads.mariadb.org/
 
-install windows service 
+- redis
+  http://redis.io/download
 
-https://github.com/kohsuke/winsw
+- mongodb
+  https://www.mongodb.com/download-center?jmp=nav#community
 
-winsw.exe install/uninstall/start/stop/stutas
+- install windows service 
+
+  https://github.com/kohsuke/winsw
+
+  usage: winsw.exe install/uninstall/start/stop/stutas
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -56,15 +63,7 @@ winsw.exe install/uninstall/start/stop/stutas
 
 ```
 
-```conf
-        location ~ \.php(.*)$  {
-            fastcgi_pass   127.0.0.1:9000;
-            fastcgi_index  index.php;
-            fastcgi_split_path_info  ^((?U).+\.php)(/?.+)$;
-            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-            fastcgi_param  PATH_INFO  $fastcgi_path_info;
-            fastcgi_param  PATH_TRANSLATED  $document_root$fastcgi_path_info;
-            include        fastcgi_params;
-        }
+mongodb and redis-server 自带windows服务安装和
 
-```
+
+  
