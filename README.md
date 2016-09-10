@@ -63,7 +63,12 @@
 
 ```
 
-mongodb and redis-server 自带windows服务安装和
+mongodb and redis-server 自带windows服务安装
 
+### 使用
+`sc <command> <service_name>`
 
+example:
+
+`sc start nginx`
   
