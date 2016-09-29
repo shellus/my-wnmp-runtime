@@ -14,7 +14,9 @@ ubuntu下用的环境配置
 
 
 ## php：
-`sudo apt-get purge `dpkg -l | grep php| awk '{print $2}' |tr "\n" " "``
+``` 
+sudo apt-get purge `dpkg -l | grep php| awk '{print $2}' |tr "\n" " "`
+```
 
 `sudo add-apt-repository ppa:ondrej/php`
 
