@@ -12,9 +12,9 @@ ubuntu下用的环境配置
 ### 修改my.conf (可能在/etc/mysql/mysql.conf.d/mysqld.cnf)
 ```
 [mysqld]
-init_connect='SET NAMES utf8'
-default-character-set=utf8
-default-collation = utf8_general_ci
+default-storage-engine=INNODB
+character-set-server=utf8
+collation-server=utf8_general_ci
 ```
 
 ### 设置用户允许远程连接
