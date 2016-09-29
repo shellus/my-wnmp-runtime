@@ -6,15 +6,31 @@ ubuntu下用的环境配置
 
 ## mysql:
 
+### 安装
 `sudo apt-get install mysql-server`
 
-修改my.conf (可能在/etc/mysql/mysql.conf.d/mysqld.cnf)
+### 修改my.conf (可能在/etc/mysql/mysql.conf.d/mysqld.cnf)
 ```
 [mysqld]
 init_connect='SET NAMES utf8'
 default-character-set=utf8
 default-collation = utf8_general_ci
 ```
+
+### 设置用户允许远程连接
+
+my.conf里面bind-address从127.0.0.1改为0.0.0.0
+```
+mysql -uroot -proot
+
+use mysql;
+
+update `user` set `host`='%' where `user`='root';
+
+flush privileges;
+```
+
+| 记得重启mysql哦
 
 ## redis:
 
